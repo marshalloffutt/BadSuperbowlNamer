@@ -139,5 +139,35 @@ namespace BadSuperbowlNamer.Tests
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test10_converting_83_should_be_LXXXIII()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 83;
+            var expectedResult = "LXXXIII";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void test11_converting_97_should_be_XCVII()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 97;
+            var expectedResult = "XCVII";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
