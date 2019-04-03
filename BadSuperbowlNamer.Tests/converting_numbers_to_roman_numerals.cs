@@ -124,5 +124,20 @@ namespace BadSuperbowlNamer.Tests
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test09_converting_68_should_be_LXVIII()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 68;
+            var expectedResult = "LXVIII";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
