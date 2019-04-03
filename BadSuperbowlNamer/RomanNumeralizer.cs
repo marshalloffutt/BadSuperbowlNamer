@@ -12,6 +12,10 @@ namespace BadSuperbowlNamer
             {
                 return "M" + ConvertToRoman(number - 1000);
             }
+            if (number >= 900)
+            {
+                return "CM" + ConvertToRoman(number - 900);
+            }
             if (number >= 500)
             {
                 return "D" + ConvertToRoman(number - 500);
