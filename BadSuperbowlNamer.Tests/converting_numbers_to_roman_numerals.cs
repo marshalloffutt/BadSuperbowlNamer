@@ -14,7 +14,7 @@ namespace BadSuperbowlNamer.Tests
             var expectedResult = "I";
 
             //Act     -- do the thing        -- When
-            var actualResult = converter.ConvertMyShit(input);
+            var actualResult = converter.ConvertToRoman(input);
 
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);
@@ -29,7 +29,7 @@ namespace BadSuperbowlNamer.Tests
             var expectedResult = "V";
 
             //Act     -- do the thing        -- When
-            var actualResult = converter.ConvertMyShit(input);
+            var actualResult = converter.ConvertToRoman(input);
 
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);

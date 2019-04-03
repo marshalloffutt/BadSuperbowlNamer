@@ -6,15 +6,19 @@ namespace BadSuperbowlNamer
 {
     public class RomanNumeralizer
     {
-        public string ConvertMyShit(int numberToConvert)
+        public string ConvertToRoman(int number)
         {
-            if (numberToConvert == 5)
+            if (number >= 5)
             {
-                return "V";
+                return "V" + ConvertToRoman(number - 5);
+            }
+            if (number >= 1)
+            {
+                return "I" + ConvertToRoman(number - 1);
             }
             else
             {
-                return "I";
+                return string.Empty;
             }
         }
     }
