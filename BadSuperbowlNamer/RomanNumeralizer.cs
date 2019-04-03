@@ -8,10 +8,6 @@ namespace BadSuperbowlNamer
     {
         public string ConvertToRoman(int number)
         {
-            if (number >= 15)
-            {
-                return "XV" + ConvertToRoman(number - 15);
-            }
             if (number >= 10)
             {
                 return "X" + ConvertToRoman(number - 10);
