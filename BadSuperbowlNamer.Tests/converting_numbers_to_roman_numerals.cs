@@ -274,5 +274,50 @@ namespace BadSuperbowlNamer.Tests
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test18_converting_1004_should_be_MIV()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 1004;
+            var expectedResult = "MIV";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void test19_converting_1006_should_be_MVI()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 1006;
+            var expectedResult = "MVI";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void test20_converting_1023_should_be_MXXIII()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 1023;
+            var expectedResult = "MXXIII";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
