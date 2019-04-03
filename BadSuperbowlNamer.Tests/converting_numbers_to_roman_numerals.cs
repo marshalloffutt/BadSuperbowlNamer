@@ -6,7 +6,7 @@ namespace BadSuperbowlNamer.Tests
     public class converting_numbers_to_roman_numerals
     {
         [Fact]
-        public void converting_1_should_be_I()
+        public void test01_converting_1_should_be_I()
         {
             //Arrange -- context             -- Given
             var converter = new RomanNumeralizer();
@@ -21,7 +21,7 @@ namespace BadSuperbowlNamer.Tests
         }
 
         [Fact]
-        public void converting_5_should_be_V()
+        public void test02_converting_5_should_be_V()
         {
             //Arrange -- context             -- Given
             var converter = new RomanNumeralizer();
@@ -36,7 +36,7 @@ namespace BadSuperbowlNamer.Tests
         }
 
         [Fact]
-        public void converting_9_should_be_IX()
+        public void test03_converting_9_should_be_IX()
         {
             //Arrange -- context             -- Given
             var converter = new RomanNumeralizer();
@@ -51,7 +51,7 @@ namespace BadSuperbowlNamer.Tests
         }
 
         [Fact]
-        public void converting_12_should_be_XII()
+        public void test04_converting_12_should_be_XII()
         {
             //Arrange -- context             -- Given
             var converter = new RomanNumeralizer();
@@ -66,12 +66,27 @@ namespace BadSuperbowlNamer.Tests
         }
 
         [Fact]
-        public void converting_16_should_be_XVI()
+        public void test05_converting_16_should_be_XVI()
         {
             //Arrange -- context             -- Given
             var converter = new RomanNumeralizer();
             var input = 16;
             var expectedResult = "XVI";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void test06_converting_29_should_be_XXIX()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 29;
+            var expectedResult = "XXIX";
 
             //Act     -- do the thing        -- When
             var actualResult = converter.ConvertToRoman(input);
