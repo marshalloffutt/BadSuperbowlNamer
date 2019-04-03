@@ -109,5 +109,20 @@ namespace BadSuperbowlNamer.Tests
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test08_converting_45_should_be_XLV()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 45;
+            var expectedResult = "XLV";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertToRoman(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
