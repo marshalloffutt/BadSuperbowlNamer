@@ -19,5 +19,20 @@ namespace BadSuperbowlNamer.Tests
             //Assert  -- checking the result -- Then
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void converting_5_should_be_V()
+        {
+            //Arrange -- context             -- Given
+            var converter = new RomanNumeralizer();
+            var input = 5;
+            var expectedResult = "V";
+
+            //Act     -- do the thing        -- When
+            var actualResult = converter.ConvertMyShit(input);
+
+            //Assert  -- checking the result -- Then
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
