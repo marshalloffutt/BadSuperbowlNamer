@@ -8,58 +8,33 @@ namespace BadSuperbowlNamer
     {
         public string ConvertToRoman(int number)
         {
-            if (number >= 1000)
+            Dictionary<int, string> RomanNumeralsDictionary = new Dictionary<int, string>
             {
-                return "M" + ConvertToRoman(number - 1000);
-            }
-            if (number >= 900)
+                { 1000, "M" },
+                { 900, "CM" },
+                { 500, "D" },
+                { 100, "C" },
+                { 90, "XC" },
+                { 50, "L" },
+                { 40, "XL" },
+                { 10, "X" },
+                { 9, "IX"},
+                { 5, "V" },
+                { 4, "IV" },
+                { 1, "I"}
+            };
+
+            var RomanNumeral = new StringBuilder();
+
+            foreach (var kvp in RomanNumeralsDictionary)
             {
-                return "CM" + ConvertToRoman(number - 900);
+                while (number >= kvp.Key)
+                {
+                    RomanNumeral.Append(kvp.Value);
+                    number -= kvp.Key;
+                }
             }
-            if (number >= 500)
-            {
-                return "D" + ConvertToRoman(number - 500);
-            }
-            if (number >= 100)
-            {
-                return "C" + ConvertToRoman(number - 100);
-            }
-            if (number >= 90)
-            {
-                return "XC" + ConvertToRoman(number - 90);
-            }
-            if (number >= 50)
-            {
-                return "L" + ConvertToRoman(number - 50);
-            }
-            if (number >= 40)
-            {
-                return "XL" + ConvertToRoman(number - 40);
-            }
-            if (number >= 10)
-            {
-                return "X" + ConvertToRoman(number - 10);
-            }
-            if (number >= 9)
-            {
-                return "IX" + ConvertToRoman(number - 9);
-            }
-            if (number >= 5)
-            {
-                return "V" + ConvertToRoman(number - 5);
-            }
-            if (number >= 4)
-            {
-                return "IV" + ConvertToRoman(number - 4);
-            }
-            if (number >= 1)
-            {
-                return "I" + ConvertToRoman(number - 1);
-            }
-            else
-            {
-                return string.Empty;
-            }
+            return RomanNumeral.ToString();
         }
     }
 }
