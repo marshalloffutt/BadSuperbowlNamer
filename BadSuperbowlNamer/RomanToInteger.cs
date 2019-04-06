@@ -25,14 +25,15 @@ namespace BadSuperbowlNamer
 
                 if (previousNumber != 0 && previousNumber < currentNumber)
                 {
-                    if (previousNumber == 1)
+                    if (previousNumber == 1 && (currentNumber == 10))
                     {
-                        totalNumber -= 2;
+                        totalNumber -= 2 * previousNumber;
                     }
+
                     else return 0;
                 }
 
-                previousNumber = totalNumber;
+                previousNumber = currentNumber;
             }
 
             return totalNumber;
