@@ -28,5 +28,17 @@ namespace BadSuperbowlNamer.Tests
 
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test03_converting_IX_should_be_9()
+        {
+            var converter = new Numberizer();
+            var input = "IX";
+            int expectedResult = 9;
+
+            var actualResult = converter.ConvertToNumber(input);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }

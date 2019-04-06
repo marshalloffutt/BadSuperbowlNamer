@@ -8,16 +8,32 @@ namespace BadSuperbowlNamer
     {
         public int ConvertToNumber(string romanNumeral)
         {
-            var number = 0;
-            if (romanNumeral == "I")
+            Dictionary<char, int> RomanNumerals = new Dictionary<char, int>
             {
-                number = 1;
-            }
-            else if (romanNumeral == "V")
+                {'I', 1 },
+                {'V', 5 },
+                {'X', 10 },
+            };
+
+            var totalNumber = 0;
+            var prevValue = 0;
+
+            foreach (var letter in romanNumeral)
             {
-                number = 5;
+                var currentValue = RomanNumerals[letter];
+                totalNumber += currentValue;
+
+                if (prevValue != 0 && prevValue < totalNumber)
+                {
+                    if (prevValue == 1)
+                    {
+                        totalNumber -= 2;
+                    }
+                    else return 0;
+                }
+                prevValue = totalNumber;
             }
-            return number;
+            return totalNumber;
 
         }
     }
