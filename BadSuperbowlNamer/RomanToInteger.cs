@@ -13,6 +13,7 @@ namespace BadSuperbowlNamer
                 {'I', 1 },
                 {'V', 5 },
                 {'X', 10 },
+                {'L', 50 }
             };
 
             var totalNumber = 0;
@@ -25,7 +26,8 @@ namespace BadSuperbowlNamer
 
                 if (previousNumber != 0 && previousNumber < currentNumber)
                 {
-                    if (previousNumber == 1 && (currentNumber == 10))
+                    if (previousNumber == 1 && (currentNumber == 5 || currentNumber == 10)
+                        || previousNumber == 10 && (currentNumber == 50))
                     {
                         totalNumber -= 2 * previousNumber;
                     }
