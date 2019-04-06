@@ -1,6 +1,6 @@
 # BadSuperbowlNamer
 
-An exercise in TDD (Test Driven Development) where we convert integers to Roman Numerals, and then test a series of cases. This solution uses the Dictionary method as a lookup for conversion.
+An exercise in TDD (Test Driven Development) where we wrote an application incrementally via test cases that can convert integers to Roman Numerals and vice versa.
 
 Test Cases	
 --------
