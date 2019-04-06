@@ -13,6 +13,10 @@ namespace BadSuperbowlNamer
             {
                 number = 1;
             }
+            else if (romanNumeral == "V")
+            {
+                number = 5;
+            }
             return number;
 
         }

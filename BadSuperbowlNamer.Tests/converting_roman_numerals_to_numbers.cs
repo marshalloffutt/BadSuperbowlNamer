@@ -16,5 +16,17 @@ namespace BadSuperbowlNamer.Tests
 
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test02_converting_V_should_be_5()
+        {
+            var converter = new Numberizer();
+            var input = "V";
+            int expectedResult = 5;
+
+            var actualResult = converter.ConvertToNumber(input);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
