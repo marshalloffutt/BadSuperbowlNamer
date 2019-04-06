@@ -40,5 +40,17 @@ namespace BadSuperbowlNamer.Tests
 
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test04_converting_XII_should_be_12()
+        {
+            var converter = new Numberizer();
+            var input = "XII";
+            int expectedResult = 12;
+
+            var actualResult = converter.ConvertToNumber(input);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }

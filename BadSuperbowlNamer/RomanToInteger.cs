@@ -16,23 +16,25 @@ namespace BadSuperbowlNamer
             };
 
             var totalNumber = 0;
-            var prevValue = 0;
+            var previousNumber = 0;
 
             foreach (var letter in romanNumeral)
             {
-                var currentValue = RomanNumerals[letter];
-                totalNumber += currentValue;
+                var currentNumber = RomanNumerals[letter];
+                totalNumber += currentNumber;
 
-                if (prevValue != 0 && prevValue < totalNumber)
+                if (previousNumber != 0 && previousNumber < currentNumber)
                 {
-                    if (prevValue == 1)
+                    if (previousNumber == 1)
                     {
                         totalNumber -= 2;
                     }
                     else return 0;
                 }
-                prevValue = totalNumber;
+
+                previousNumber = totalNumber;
             }
+
             return totalNumber;
 
         }
