@@ -22,6 +22,7 @@ namespace BadSuperbowlNamer.Tests
         [InlineData("DI", 501)]
         [InlineData("DCXLIX", 649)]
         [InlineData("DCCXCVIII", 798)]
+        [InlineData("DCCCXCI", 891)]
         public void converting_any_roman_numeral_should_return_the_correct_number(string input, int expectedResult)
         {
             var converter = new Numberizer();
