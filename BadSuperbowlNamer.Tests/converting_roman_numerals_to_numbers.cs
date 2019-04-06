@@ -14,6 +14,7 @@ namespace BadSuperbowlNamer.Tests
         [InlineData("XXIX", 29)]
         [InlineData("XLIV", 44)]
         [InlineData("XLV", 45)]
+        [InlineData("LXVIII", 68)]
         public void converting_any_roman_numeral_should_return_the_correct_number(string input, int expectedResult)
         {
             var converter = new Numberizer();
