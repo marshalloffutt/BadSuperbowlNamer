@@ -28,6 +28,7 @@ namespace BadSuperbowlNamer.Tests
         [InlineData("MVI", 1006)]
         [InlineData("MXXIII", 1023)]
         [InlineData("MMXIV", 2014)]
+        [InlineData("MMMCMXCIX", 3999)]
         public void converting_any_roman_numeral_should_return_the_correct_number(string input, int expectedResult)
         {
             var converter = new Numberizer();
