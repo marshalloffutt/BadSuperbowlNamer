@@ -52,5 +52,17 @@ namespace BadSuperbowlNamer.Tests
 
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void test05_converting_XVI_should_be_16()
+        {
+            var converter = new Numberizer();
+            var input = "XVI";
+            int expectedResult = 16;
+
+            var actualResult = converter.ConvertToNumber(input);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
